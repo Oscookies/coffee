@@ -13,25 +13,36 @@ p {
     padding: 20px;
 }
 
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap; /*direction wrap*/
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+}
+
+.main {
+    flex: 3 0px; 
+}
+
+.aside {
+    align-self: center;
+    flex: 1 0 0;  /*grow shrink basis*/
+}
+
+.fa-user-circle {
+    margin-right: 1rem;
+}
+
 nav {
     padding: 0 7rem;
-    margin: 2rem;
+    margin: 3rem;
 }
 
 ul {
   display: flex;
-  flex: 1 1 0px;
+  flex: 1 0 0;
   justify-content: center;
-  border-bottom: 1px solid #aaa;
-}
-
-ul > *:first-child {
-    flex-grow: 1;
-}
-
-ul > *:last-child {
-    text-align: right;
-    flex-grow: 3;
 }
 
 li {
@@ -52,4 +63,5 @@ li a:hover {
 
 input {
     background: transparent;
-} 
+    border: none;
+}
