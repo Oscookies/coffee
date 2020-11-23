@@ -21,12 +21,10 @@ function addFixedPosition() {
 var imageIndex = 1;
 showGallery(imageIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showGallery(imageIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showGallery(imageIndex = index);
 }
@@ -39,14 +37,13 @@ function showGallery(index) {
   if (index < 1) {
     imageIndex = slides.length
   }
-  var i;
-  for (i = 0; i < slides.length; i++) {
+  for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
   slides[imageIndex-1].style.display = "inline";
 } 
 
-//Hide offer
+//Hide arrows
 const imageGallery = document.querySelector(".gallery-container")
 var prev = document.querySelector(".prev")
 var next = document.querySelector(".next")

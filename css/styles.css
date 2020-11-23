@@ -1,3 +1,5 @@
+/* Buscar mejores practicas CSS, como organizar codigo */
+
 html {
     background: #eeece8;
 }
@@ -101,4 +103,16 @@ input {
   border-bottom: 1px solid #aaa;
   margin: auto;
   margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid img {
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
