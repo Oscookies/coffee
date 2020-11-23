@@ -65,3 +65,40 @@ input {
     background: transparent;
     border: none;
 }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.gallery-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+/* Hide the images by default */
+.gallery-image {
+  display: none;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-size: 18px;
+  display: none;
+}
+
+.next {
+  right: 0;
+}
+
+.division {
+  border-bottom: 1px solid #aaa;
+  margin: auto;
+  margin-bottom: 2rem;
+}
