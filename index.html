@@ -17,55 +17,207 @@
 </head>
 
 <body>
-    <header>
-        <p class="offer">We are now offering local delivery on Sunday's. Place your order before Saturday 3:00pm!</p>
-            <nav class="wrapper">
-                <div class="aside aside-1">
-                    <i class="fas fa-search"></i>
-                    <input placeholder="Search"></li>
-                </div>
-                <ul class="main">
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Subscription</a></li>
-                    <li>
-                        <a href="#">About Us</a>
-                        <svg class="icon-chevron-small " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">      <path d="M1 1L5 5L9 1" stroke="currentColor"></path>    </svg>
-                    </li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <div class="aside aside-2">
-                    <i class="far fa-user-circle"></i>
-                    <i class="fas fa-shopping-bag"></i>
+    <p class="offer">We are now offering local delivery on Sunday's. Place your order before Saturday 3:00pm!</p>
+    <nav class="overflow-menu">
+        <div class="overlay"></div>
+        <button class="navigation-mobile__close-button" data-mobile-nav-close="" aria-label="Close">
+            <svg class="icon-close " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">      <path d="M1 1L17 17M17 1L1 17" stroke="currentColor" stroke-width="1.5"></path>
+            </svg>
+        </button>
+        <div class="navigation-mobile__flyout" data-mobile-main-flyout="" data-animation-state="open">
+            <div class="navigation-mobile__account">
+               <a href="/account/login" class="navigation-mobile__account-link">
+                  <svg class="icon-user " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                     <path d="M4.95898 21.221C6.66657 20.2309 8.48298 19.4416 10.372 18.869C11.209 18.56 11.3 16.64 10.7 15.98C9.83398 15.027 9.09998 13.91 9.09998 11.214C8.99795 10.1275 9.36642 9.04944 10.1121 8.25272C10.8578 7.45599 11.9092 7.01703 13 7.047C14.0908 7.01703 15.1422 7.45599 15.8879 8.25272C16.6335 9.04944 17.002 10.1275 16.9 11.214C16.9 13.914 16.166 15.027 15.3 15.98C14.7 16.64 14.791 18.56 15.628 18.869C17.517 19.4416 19.3334 20.2309 21.041 21.221" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  My account
+               </a>
+            </div>
+            <div class="navigation-mobile__search">
+               <form class="navigation-mobile__search-form" action="/search" method="get">
+                  <input name="q" type="search" placeholder="Search" class="navigation-mobile__search-field" data-search-input="">
+                  <button type="submit" aria-label="Search" class="navigation-mobile__search-submit">
+                     <svg class="icon-search " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07722 15.3846C12.1132 15.3846 15.3849 12.1128 15.3849 8.07692C15.3849 4.04099 12.1132 0.769226 8.07722 0.769226C4.0413 0.769226 0.769531 4.04099 0.769531 8.07692C0.769531 12.1128 4.0413 15.3846 8.07722 15.3846Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M18.8466 18.8461L13.4619 13.4615" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                     </svg>
+                  </button>
+               </form>
+            </div>
+            <ul class="mobile-menu" data-navigation-desktop="">
+               <li class="mobile-menu__tier-1-item">
+                  <a href="/collections/coffee" class="mobile-menu__tier-1-link">
+                  Shop
+                  </a>
+               </li>
+               <li class="mobile-menu__tier-1-item">
+                  <a href="/products/coffee-subscription" class="mobile-menu__tier-1-link">
+                  Subscription
+                  </a>
+               </li>
+               <li class="mobile-menu__tier-1-item">
+                  <button class="mobile-menu__tier-1-button" aria-haspopup="true" data-mobile-submenu-button="tier-1">
+                     About Us
+                     <svg class="icon-chevron-small " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+                     </svg>
+                  </button>
+               </li>
+               <li class="mobile-menu__tier-1-item">
+                  <a href="/pages/shop-hours" class="mobile-menu__tier-1-link">
+                  Contact
+                  </a>
+               </li>
+            </ul>
+         </div>
+    </nav>
+    <div class="body-wrapper">
+        <header class="desktop-nav">
+                <nav class="wrapper">
+                    <div class="aside aside-1">
+                        <i class="fas fa-search"></i>
+                        <input placeholder="Search"></li>
+                    </div>
+                    <ul>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Subscription</a></li>
+                        <li>
+                            <a href="#">About Us</a>
+                            <svg class="icon-chevron-small " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">      <path d="M1 1L5 5L9 1" stroke="currentColor"></path>    </svg>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="aside aside-2">
+                        <i class="far fa-user-circle"></i>
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </nav>​
+        </header>
+        <header class="mobile-nav">
+            <nav class="mobile-wrapper">
+                <i class="fas fa-mug-hot fa-2x"></i>
+                <div class="profile-shop">
+                    <i class="far fa-user-circle fa-lg"></i>
+                    <i class="fas fa-shopping-bag fa-lg"></i>
                 </div>
             </nav>​
-    </header>
-    <div class="gallery-container">
-        <div class="gallery-image">
-            <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg" style="width:100%">
+        </header>
+        <img class ="logo"src="https://cdn.shopify.com/s/files/1/0248/3425/files/editions-modern-logo_71b1c742-7220-472e-be1f-5a417686b4eb_320x76.png?v=1590526061">
+        <div class="division"></div>
+        <div class="gallery-container">
+            <div class="gallery-image">
+                <img src="https://www.capturehighered.com/wp-content/uploads/2017/02/CoffeeBeans-e1485982838604-720x360.jpg" style="width:100%">
+                <h3>Begin Brewing At Home</h3>
+                <p>All beans are all medium roast and pair perfectly with any brewing methods</p>
+                <button class="brown-button">View shop hours</button>
+            </div>
+        
+            <div class="gallery-image">
+                <img src="https://www.aumanufacturing.com.au/wp-content/uploads/2019/10/fresh-coffee-grounds-720x405-720x360.jpg" style="width:100%">
+                <h3>END Brewing At Home</h3>
+                <p>All beans are all medium roast and pair perfectly with any brewing methods</p>
+                <button class="brown-button">Buy now</button>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-    
-        <div class="gallery-image">
-            <img src="https://www.elfinancierocr.com/resizer/WiLsprkAa0ZDTZxBVA3qg990Clg=/600x0/center/middle/filters:quality(100)/arc-anglerfish-arc2-prod-gruponacion.s3.amazonaws.com/public/53ERY5PMNZCPZATKYZU7JCCXKI.JPG" style="width:100%">
+
+        <div class="division"></div>
+
+        <h2>Due to COVID, we are only operating as a takeout window. Our online shop is always open and the beans we offer continue to rotate, depending on what is available to our roastery!</h2>
+
+        <div class="division"></div>
+
+        <div class="grid">
+            <div class="product">
+                <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
+                <h5>Espresso 1</h5>
+                <p>$2.88</p>
+            </div><div class="product">
+                <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
+                <h5>Espresso 1</h5>
+                <p>$2.88</p>
+            </div><div class="product">
+                <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
+                <h5>Espresso 1</h5>
+                <p>$2.88</p>
+            </div><div class="product">
+                <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
+                <h5>Espresso 1</h5>
+                <p>$2.88</p>
+            </div><div class="product">
+                <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
+                <h5>Espresso 1</h5>
+                <p>$2.88</p>
+            </div><div class="product">
+                <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
+                <h5>Espresso 1</h5>
+                <p>$2.88</p>
+            </div>
         </div>
-    
-        <div class="gallery-image">
-            <img src="https://anypy.imgix.net/destination/180/2.jpg" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="division"></div>
+
+        <section>
+            <article>
+                <p> August 07, 2020</p>
+                <h3>4 ways to elevate your morning routine</h3>
+                <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
+                <div class="article-content">
+                    <p class="article-content">There are many simple ways to practice mindfulness and it all starts with the perfect morning routine to utilize your time and energy to the best of its ability. Here are 4 things that you can start your day with!</p>
+                    <p>Continue Reading</p>
+                </div>
+            </article>
+            <article>
+                <p> August 07, 2020</p>
+                <h3>4 ways to elevate your morning routine</h3>
+                <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
+                <div class="article-content">
+                    <p class="article-content">There are many simple ways to practice mindfulness and it all starts with the perfect morning routine to utilize your time and energy to the best of its ability. Here are 4 things that you can start your day with!</p>
+                    <p>Continue Reading</p>
+                </div>
+            </article>
+
+        </section>
+
+        <div class="division"></div>
+
+        <section class ="form">
+            <h3>Join The Family</h3>
+            <p>Sign up to our newsletter to receive updates about our future roasts!</p>
+            <div class="email">
+                <input type="email", aria-label="Email address">
+                <button>SUBSCRIBE</button>
+            </div>
+        </section>
+
+        <div class="division"></div>
+
+        <footer>
+            <h4>Social</h4>
+            <div class="social-media-container">
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            <h4>Navigate</h4>
+            <p>Shop</p>
+            <p>Subscription</p>
+            <p>About Us</p>
+            <p>Contact</p>
+        
+            <h4>Local Curbside Pickup</h4>
+            <p>We are working to fulfill all bean orders and are offering safe pickup from Monday-Saturday!</p>
+            <p>Please contact us with any questions.</p>
+
+            <p>© 2020 Oscar C</p>
+        </footer>
+
+        <script src="js/scripts.js"></script>
     </div>
-
-    <div class="division"></div>
-
-    <div class="grid">
-        <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
-        <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
-        <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
-        <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
-        <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
-        <img src="https://www.eatright.org/-/media/eatrightimages/cup-of-coffee_528814833.jpg">
-      </div>
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>

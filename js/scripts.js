@@ -1,3 +1,17 @@
+//Mobile menu click
+function toggleOpen() {
+  console.log('Hello');
+  document.querySelector(".overflow-menu").classList.toggle('open');
+}
+
+const menu = document.querySelector(".fa-mug-hot")
+menu.addEventListener('click', toggleOpen);
+
+const close_menu = document.querySelector(".navigation-mobile__close-button")
+close_menu.addEventListener('click', function() {
+  document.querySelector(".overflow-menu").classList.remove('open');
+});
+
 //Hide offer
 const offer = document.querySelector(".offer")
 offer.addEventListener("click", function() {
@@ -8,7 +22,7 @@ offer.addEventListener("click", function() {
 window.onscroll = function() {
   addFixedPosition()
 };
-var header = document.querySelector("nav")
+var header = document.querySelector(".mobile-wrapper")
 var sticky = header.offsetTop;
 function addFixedPosition() {
   if (window.pageYOffset > sticky) {
@@ -19,7 +33,6 @@ function addFixedPosition() {
 } 
 
 var imageIndex = 1;
-showGallery(imageIndex);
 
 function plusSlides(n) {
   showGallery(imageIndex += n);
@@ -56,3 +69,9 @@ imageGallery.addEventListener("mouseout", function() {
   prev.style.display = "none";
   next.style.display = "none";
 }); 
+
+showGallery(imageIndex);
+const interval = setInterval(function() {
+  plusSlides(1);
+}, 50000);
+
